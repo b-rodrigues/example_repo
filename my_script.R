@@ -1,6 +1,9 @@
+library(ggplot2)
+
 data(mtcars)
 
-plot(mtcars$mpg, mtcars$hp)
+ggplot(data = mtcars) +
+    geom_point(aes(y = cyl, x = mpg))
 
 # calculate linear regression coefficient
 
