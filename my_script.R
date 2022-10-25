@@ -11,3 +11,4 @@ lm_mod <- lm(mtcars$cyl ~ mtcars$mpg)
 
 lm_mod$coefficients
 
+data(iris)
