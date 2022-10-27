@@ -9,3 +9,7 @@ ggplot(data = mtcars) +
 rf <- randomForest(hp ~ mpg, data = mtcars)
 
 plot(rf)
+
+rf2 <- randomForest(hp ~ mpg + am + cyl, data = mtcars)
+
+plot(rf2)
