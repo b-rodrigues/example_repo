@@ -1,16 +1,11 @@
 library(ggplot2)
+library(randomForest)
 
 data(mtcars)
 
 ggplot(data = mtcars) +
-    geom_point(aes(y = cyl, x = mpg))
+  geom_point(aes(y = cyl, x = mpg))
 
-# calculate linear regression coefficient
+rf <- randomForest(hp ~ mpg, data = mtcars)
 
-lm_mod <- lm(mtcars$cyl ~ mtcars$mpg)
-
-lm_mod$coefficients
-
-data(iris)
-
-head(iris)
+plot(rf)
